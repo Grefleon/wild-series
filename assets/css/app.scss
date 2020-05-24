@@ -1,5 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
 
+$primary: #3fbf6e;
+$secondary: #465591;
+$dark: #3a3d3b;
+$light: #f5f6fa;
+
 body {
-    background-color: blue;
+    background-color: $light;
+}
+
+.navbar{
+    background-color: $primary;
+    color: $dark;
+    a, a:hover{
+        color: $dark;
+    }
 }
