@@ -14,7 +14,11 @@
         <h2>Liste des épisodes</h2>
             <ul>
                 {% for episode in episodes %}
-                    <li>Épisode {{ episode.number }} : {{ episode.title }}</li>
+                    <li>
+                        <a href="{{ path('wild_show_episode', {id: episode.id}) }}">
+                            Épisode {{ episode.number }} : {{ episode.title }}
+                        </a>
+                    </li>
                 {% else %}
                     Aucun épisode trouvé
                 {% endfor %}
@@ -22,7 +26,7 @@
         </div>
 
         <p class="back-link">
-            <a href="{{ path('wild_show_program', {programId: program.id}) }}">
+            <a href="{{ path('wild_show_program', {id: program.id}) }}">
                 Retour à la liste des saisons
             </a>
         </p>

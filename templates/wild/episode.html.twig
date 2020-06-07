@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ program.title }} | S{{ season.number }} E{{ episode.number}} {% endblock %}
+
+{% block body %}
+    <h1>Episode {{ episode.number }} de la saison {{ season.number }} de {{ program.title }}</h1>
+
+
+    <div class="container">
+        <p><span class="font-weight-bold">Série</span> :
+            <a href="{{ path('wild_show', {slug: program.title|lower|replace({' ': '-'})}) }}">{{ program.title }}</a>
+        </p>
+        <p><span class="font-weight-bold">Saison</span> :
+            <a href="{{ path('wild_show_season', {id: season.id}) }}">{{ season.number }}</a>
+        </p>
+        <p><span class="font-weight-bold">Numéro de l'épisode</span> : {{ episode.number }}</p>
+        <p><span class="font-weight-bold">Résumé</span> :<br/>
+        {{ episode.synopsis }}</p>
+
+        <p class="back-link">
+            <a href="{{ path('wild_show_season', {id: season.id}) }}">
+                Retour à la liste des épisodes
+            </a>
+        </p>
+
+    </div>
+{% endblock %}
