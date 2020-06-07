@@ -1,12 +1,34 @@
 @import "~bootstrap/scss/bootstrap";
-
-$primary: #3fbf6e;
-$secondary: #465591;
-$dark: #3a3d3b;
-$light: #f5f6fa;
+@import "vars";
 
 body {
     background-color: $light;
+    color: $dark;
+    font-family: $text-font;
+    font-size: $regular-size;
+}
+
+h1, h2, h3{
+    font-family: $title-font;
+}
+
+h1{
+    font-size: $main-title-size;
+    text-align: center;
+    margin-bottom: $spacing;
+    margin-top: $spacing;
+}
+
+h2{
+    font-size: $secondary-title-size;
+}
+
+a{
+    color: $dark;
+
+    &:hover{
+        color: $secondary;
+    }
 }
 
 .navbar{
@@ -15,4 +37,14 @@ body {
     a, a:hover{
         color: $dark;
     }
+}
+
+.back-link{
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+    text-align: right;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: $secondary !important;
 }

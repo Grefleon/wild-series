@@ -1,0 +1,14 @@
+@import "vars";
+
+.episode-list{
+    background-color: darken($light, 5%);
+    border: 1px solid lighten($dark, 30%);
+    border-radius: $spacing-xs;
+    padding: $spacing;
+
+    ul{
+        list-style: none;
+        margin-bottom: 0;
+    }
+}
+
