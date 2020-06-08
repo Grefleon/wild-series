@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catégories{% endblock %}
+
+{% block body %}
+    <h1>Toutes les catégories</h1>
+
+    <div class="container">
+        {% for category in categories %}
+            <div>
+                <h2>{{ loop.index }} / {{ category.name }}</h2>
+                <p> Nombre de séries : {{ category.programs|length }}</p>
+            </div>
+        {% else %}
+            Aucune catégorie trouvée.
+        {% endfor %}
+
+        <p class="back-link">
+            <a href="{{ path('category_add') }}">
+                Ajouter une catégorie
+            </a>
+        </p>
+    </div>
+{% endblock %}

@@ -6,6 +6,11 @@
     <h1>Toutes les séries</h1>
 
     <div class="container">
+        {{ form_start(form) }}
+            {{ form_row(form.searchField) }}
+            <button class="btn btn-primary" type="submit" name="btnSearch">Rechercher</button>
+        {{ form_end(form) }}
+
         {% for program in programs %}
             <div>
                 <h2>{{ loop.index }} / <a href="{{ path('wild_show_program', {id: program.id}) }}">{{ program.title }}</a>
