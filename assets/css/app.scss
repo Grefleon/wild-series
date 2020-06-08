@@ -48,3 +48,7 @@ a{
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: $secondary !important;
 }
+
+.break{
+    word-break: break-word;
+}
